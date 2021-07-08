@@ -1,0 +1,10 @@
+services:
+    has-pip:
+      build: .      
+      entrypoint: "tail -f /dev/null"
+      volumes:
+        - ./data:/data
+    no-pip:
+      image: python:3.9-slim
+      entrypoint: "tail -f /dev/null"
+        
